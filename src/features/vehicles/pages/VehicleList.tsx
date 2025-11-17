@@ -24,8 +24,6 @@ export default function VehicleList() {
 
   return (
     <div>
-      <h1 className="text-black text-2xl font-semibold mb-4">Vehículos</h1>
-
       <form onSubmit={handleCreate} className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-3 items-end">
         <div>
           <label className="block text-sm">Matrícula</label>
