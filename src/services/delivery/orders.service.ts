@@ -26,3 +26,15 @@ export async function completeOrder(orderId: number, payload: CompleteOrderDTO):
   const json = await res.json();
   return orderSchema.parse(json);
 }
+
+export async function getOrderById(id: number): Promise<OrderDTO> {
+  const res = await client.get(`api/v1/orders/${id}`);
+  const json = await res.json();
+  return orderSchema.parse(json);
+}
+
+export async function fetchOrdersByIds(ids: number[]): Promise<OrderDTO[]> {
+  const results = await Promise.all(ids.map((id) => getOrderById(id)));
+  return results;
+}
+

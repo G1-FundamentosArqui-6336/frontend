@@ -8,7 +8,7 @@ export async function signIn(email: string, password: string) {
   let json: unknown;
   try {
     json = text ? JSON.parse(text) : undefined;
-  } catch (err) {
+  } catch {
     throw new Error(`Invalid JSON response from auth sign-in endpoint (status ${res.status}): ${text}`);
   }
 
@@ -33,7 +33,7 @@ export async function signUp(payload: unknown) {
   let json: unknown;
   try {
     json = text ? JSON.parse(text) : undefined;
-  } catch (err) {
+  } catch {
     throw new Error(`Invalid JSON response from auth sign-up endpoint (status ${res.status}): ${text}`);
   }
 
