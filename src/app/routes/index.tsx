@@ -6,7 +6,7 @@ import VehicleList from '@/features/vehicles/pages/VehicleList';
 import ProtectedRoute from './ProtectedRoute';
 import DashboardLayout from '@/app/layouts/DashboardLayout';
 import DriverPage from '@/features/dashboard/pages/DriverPage';
-import OrdersPage from '@/features/dashboard/pages/OrdersPage';
+import OrdersPage from '@/features/orders/pages/OrdersPage';
 import MaintenancePage from '@/features/dashboard/pages/MaintenancePage';
 import VehiclesPage from '@/features/dashboard/pages/VehiclesPage';
 import RoutesPage from '@/features/dashboard/pages/RoutesPage';
