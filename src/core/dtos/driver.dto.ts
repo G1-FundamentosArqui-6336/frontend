@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 export const driverSchema = z.object({
   id: z.number(),
@@ -7,7 +7,11 @@ export const driverSchema = z.object({
 });
 
 export const createDriverSchema = z.object({
-  licenceNumber: z.string(),
+  licenceNumber: z
+    .string()
+    .min(1, "Licence number is required")
+    .min(9, "Licence number must be at least 9 characters")
+    .max(10, "Licence number must be at most 10 characters"),
 });
 
 export const routeRefSchema = z.object({
