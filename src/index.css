@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --glass-bg: color-mix(in oklab, white 12%, transparent);
+    --glass-border: color-mix(in oklab, white 22%, transparent);
+  }
+
+  /* Ajustes de tipografía y scroll suave */
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
