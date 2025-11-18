@@ -9,7 +9,7 @@ export function useCreateVehicle() {
   return useMutation<VehicleDTO, Error, CreateVehicleDTO>({
     mutationFn,
     onSuccess: () => {
-      qc.invalidateQueries(['fleet', 'vehicles']);
+      qc.invalidateQueries({ queryKey: ['fleet', 'vehicles'] });
       toast.success('Vehicle created');
     },
     onError: () => {
