@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "@/app/providers/AuthProvider";
-import { Home, User, Truck, Package, FileText, LogOut } from "lucide-react";
+import { Home, User, Truck, Package, FileText, LogOut, AlertTriangle } from "lucide-react";
 
 type SidebarLinkProps = {
   to: string;
@@ -51,6 +51,7 @@ export default function DashboardLayout() {
             <SidebarLink to="driver" label="Driver" icon={User} />
             <SidebarLink to="vehicles" label="Vehicles" icon={Truck} />
             <SidebarLink to="orders" label="Orders" icon={Package} />
+            <SidebarLink to="incidents" label="Incidents" icon={AlertTriangle} />
             <SidebarLink
               to="maintenance"
               label="Maintenance Orders"

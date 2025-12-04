@@ -9,6 +9,7 @@ import OrdersPage from '@/features/orders/pages/OrdersPage';
 import MaintenancePage from '@/features/dashboard/pages/MaintenancePage';
 import VehiclesPage from '@/features/dashboard/pages/VehiclesPage';
 import RoutesPage from '@/features/routes/pages/RoutesPage';
+import IncidentsPage from '@/features/incidents/pages/IncidentsPage';
 
 export default function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ export default function AppRoutes() {
             <Route index element={<VehiclesPage />} />
             <Route path="driver" element={<DriverPage />} />
             <Route path="orders" element={<OrdersPage />} />
+            <Route path="incidents" element={<IncidentsPage />} />
             <Route path="maintenance" element={<MaintenancePage />} />
             <Route path="vehicles" element={<VehiclesPage />} />
             <Route path="routes" element={<RoutesPage />} />
